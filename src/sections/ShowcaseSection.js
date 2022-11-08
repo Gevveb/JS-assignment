@@ -1,11 +1,13 @@
 import React from 'react'
 import img1 from  '../assets/Images/img-2.svg'
 import img2 from  '../assets/Images/img-1.svg'
+import img3 from  '../assets/Images/girl-image.png'
+import img4 from  '../assets/Images/girl-image2.png'
 
 const ShowcaseSection = () => {
   return (   
         <section className="__showcase container">
-            <img src={img1} className="__img-left" alt=""/>
+            <img src={img3} className="__img-left" alt=""/>
             <div className="__show-case-body">
                 <h1>Sale Up</h1>
                 <h1>To 50% Off</h1>
@@ -16,7 +18,7 @@ const ShowcaseSection = () => {
                     SHOP NOW
                 </a>
             </div>
-            <img src={img2} className="__img-right" alt=""/>
+            <img src={img4} className="__img-right" alt=""/>
         </section>
   )
 }

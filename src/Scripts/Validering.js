@@ -1,3 +1,40 @@
+export const submitData = async (url, method, data, contentType = 'application/json') => {
+
+
+
+    const res = await fetch(url, {
+        method: method,
+        headers: {
+            'Content-Type': contentType
+        },
+        body: data
+    })
+
+    if (res.status === 200) {
+        return true
+    } 
+
+    return false
+
+
+    // fetch(url, {
+    //         method: method,
+    //         headers: {
+    //             'Content-Type': contentType
+    //         },
+    //         body: data
+    //     })
+    //         .then(res => {
+    //             if (res.status === 200) {
+    //                 return true
+    //             } 
+
+    //             return false
+    //         })
+}
+// https://win22-webapi.azurewebsites.net/api/contactform
+
+
 export const validate = (e, form = null) => {
     if (e.type === 'submit') {
         const errors = {}
