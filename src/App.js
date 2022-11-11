@@ -11,43 +11,43 @@ import { ProductContext, FeaturedProductsContext } from './Contexts/Contexts'
 import { ShoppingCartProvider } from './Contexts/ShoppingCartContext';
 
 function App() {
-  
-  const[products, setProducts] = useState([])
-  const[featuredProducts, setFeaturedProducts] = useState([])
+
+  const [products, setProducts] = useState([])
+  const [featuredProducts, setFeaturedProducts] = useState([])
 
   useEffect(() => {
     const fetchAll = async () => {
       const result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
-       setProducts(await result.json())
-    }  
+      setProducts(await result.json())
+    }
     fetchAll()
 
     const fetchFeaturedProducts = async () => {
       const result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
       setFeaturedProducts(await result.json())
-   }
-   fetchFeaturedProducts()
-    
+    }
+    fetchFeaturedProducts()
+
   }, [setProducts, setFeaturedProducts])
 
 
   return (
     <BrowserRouter>
-    <ShoppingCartProvider>
-    <ProductContext.Provider value={products}>
-      <FeaturedProductsContext.Provider value={featuredProducts}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<ProductsView />} />
-        <Route path="/contacts" element={<Contacts/>} />
-        <Route path="/products/:id" element={<ProductDetailsView />} />
-        <Route path="*" element={<NotFound/>} />
-      </Routes>
-      </FeaturedProductsContext.Provider>
-    </ProductContext.Provider>
-    </ShoppingCartProvider>
-    <FooterSection/>
-    
+      <ShoppingCartProvider>
+        <ProductContext.Provider value={products}>
+          <FeaturedProductsContext.Provider value={featuredProducts}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<ProductsView />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/products/:id" element={<ProductDetailsView />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </FeaturedProductsContext.Provider>
+        </ProductContext.Provider>
+      </ShoppingCartProvider>
+      <FooterSection />
+
     </BrowserRouter>
   );
 }

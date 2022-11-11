@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { NavLink, useSubmit } from 'react-router-dom'
+import { NavLink} from 'react-router-dom'
 import MenuIcon from '../components/MenuIcon'
-import { ShoppingCart } from '../components/ShoppingCart'
 import { useShoppingCart } from '../Contexts/ShoppingCartContext'
 
 const MainMenuSection = () => {
