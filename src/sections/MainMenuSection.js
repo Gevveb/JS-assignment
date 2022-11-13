@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import MenuIcon from '../components/MenuIcon'
 import { useShoppingCart } from '../Contexts/ShoppingCartContext'
 
 const MainMenuSection = () => {
   const [showMenu, setShowMenu] = useState(false)
-  const {cartQuantity} = useShoppingCart()
+  const { cartQuantity } = useShoppingCart()
 
   const toggleMenu = () => {
     setShowMenu(!showMenu)
@@ -28,8 +28,6 @@ const MainMenuSection = () => {
           <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">{cartQuantity}</span>
           <i className="fa-regular fa-bag-shopping"></i>
         </button>
-
-        {/* <MenuIcon quantity="3" className="icon" link="/bag" icon="fa-regular fa-bag-shopping"/>    */}
 
         <button onClick={toggleMenu} className="d-xl-none menu-icon btn-menu-icon"><i className="fa-regular fa-bars"></i></button>
       </div>

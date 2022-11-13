@@ -11,7 +11,7 @@ import ExternalLinkIcon from '../components/ExternalLinkIcon'
 const ProductDetailsView = () => {
   const { id } = useParams()
   const [product, setProduct] = useState({})
-  const { incrementQuantity, decrementQuantity } = useShoppingCart()
+  const { incrementQuantity} = useShoppingCart()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -137,54 +137,3 @@ const ProductDetailsView = () => {
 }
 
 export default ProductDetailsView
-
-
-
-/* <div>
-          <p>
-            <button className="info-section-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample">
-              Additional
-            </button>
-          </p>
-          <div>
-            <div className="collapse collapse-horizontal" id="collapseWidthExample2">
-              <div className="info-section-card">
-                On even feet time have an no at. Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p>
-            <button className="info-section-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample3" aria-expanded="false" aria-controls="collapseWidthExample">
-              Shopping & Returns
-            </button>
-          </p>
-          <div>
-            <div className="collapse collapse-horizontal" id="collapseWidthExample3">
-              <div className="info-section-card">
-                * Village did removed enjoyed explain nor ham saw calling talking.
-              </div>
-              <div className="info-section-card">
-                * Securing as informed declared or margaret.
-              </div>
-              <div className="info-section-card">
-                * Joy horrible moreover man feelings own shy.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p>
-            <button className="info-section-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample4" aria-expanded="false" aria-controls="collapseWidthExample">
-              Reviews
-            </button>
-          </p>
-          <div>
-            <div className="collapse collapse-horizontal" id="collapseWidthExample4">
-              <div className="info-section-card">
-                Way extensive and dejection get delivered deficient sincerity gentleman age. Too end instrument possession contrasted motionless. Calling offence six joy feeling. Coming merits and was talent enough far. Sir joy northward sportsmen education. Discovery incommode earnestly no he commanded if. Put still any about manor heard.
-              </div>
-            </div>
-          </div>
-        </div> */

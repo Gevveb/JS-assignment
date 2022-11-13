@@ -55,22 +55,6 @@ const ContactFormSection = () => {
              setSubmitted(false)
         }
     }
-    // const submitData = (url, data) => {
-    //     fetch('https://win22-webapi.azurewebsites.net/api/contactform', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: data
-    //         })
-    //             .then(res => {
-    //                 if (res.status === 200) {
-    //                     return true
-    //                 } 
-
-    //                 return false
-    //             })
-    // }
 
     return (
         <section className="contact">

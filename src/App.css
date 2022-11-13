@@ -35,6 +35,28 @@ header {
     color: black;
 }
 
+.not-found{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+    flex-direction: column;
+}
+.not-found h2{
+    border: 1px solid var(--color-theme);
+    border-radius: 5px;
+    display: inline;
+    width: 500px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-hover);
+    color: #e46262;
+    box-shadow: 0 0 12px 8px var(--color-hover);
+}
+
 .btn-menu-icon {
     border: none;
     outline: none;
@@ -2536,5 +2558,27 @@ footer .social-media a {
     .active-btn:focus {
         border-bottom: 2px solid var(--color-lightgray);
         color: var(--color-darkgray);
+    }
+
+    .not-found{
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 160px;
+        flex-direction: column;
+    }
+    .not-found h2{
+        border: 1px solid var(--color-theme);
+        border-radius: 5px;
+        display: inline;
+        width: 300px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color-hover);
+        color: #e46262;
+        box-shadow: 0 0 12px 8px var(--color-hover);
     }
 }
